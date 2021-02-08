@@ -12,7 +12,7 @@ $newID = $new_res->fetch()['AccountSpecID'];
 <html class=>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Mybooks</title>
+    <title>کتابخانه من</title>
 
     <meta content="Mybook" name="description">
     <link rel="stylesheet" href="./css/font.css" media="all">
@@ -25,12 +25,12 @@ $newID = $new_res->fetch()['AccountSpecID'];
 </head>
 
 
-<body>
+<body style="direction: rtl;">
 
 
-<div class="content">
+<div class="content" style="direction: rtl;">
 
-    <div class="siteHeader">
+    <div class="siteHeader" style="direction: rtl;">
         <div >
             <header>
                 <div class="siteHeader__topLine  gr-box--withShadow">
@@ -47,12 +47,14 @@ $newID = $new_res->fetch()['AccountSpecID'];
                             <ul role="menu" class="siteHeader__menuList">
                                 <li class="siteHeader__topLevelItem siteHeader__topLevelItem--home">
                                     <a href="../sadaf/firstpage.php" class="siteHeader__topLevelLink" >
-                                        Home
+<!--                                        Home-->
+                                        صفحه اصلی
                                     </a>
                                 </li>
                                 <li class="siteHeader__topLevelItem">
                                     <a href="mylibrary.php" class="siteHeader__topLevelLink">
-                                        My Library
+<!--                                        My Library-->
+                                        کتابخانه من
                                     </a>
                                 </li>
                             </ul>
@@ -64,14 +66,17 @@ $newID = $new_res->fetch()['AccountSpecID'];
     </div>
     <div class="siteHeaderBottomSpacer"></div>
 
-    <div class="mainContentContainer ">
+    <div class="mainContentContainer " style="direction: rtl;">
         <div class="mainContent ">
             <div class="mainContentFloat ">
                 <div id="leadercol">
 
-                    <div id="header" style="float: left">
+                    <div id="header" style="float: right;">
                         <h1>
-                            <a href="mylibrary.php">My Library</a>
+<!--                            <a href="mylibrary.php">My Library</a>-->
+                            <a href="mylibrary.php">
+                                کتابخانه من
+                            </a>
                         </h1>
                     </div>
 
@@ -84,26 +89,50 @@ $newID = $new_res->fetch()['AccountSpecID'];
                     <div class="clear"></div>
                 </div>
 
-                <div id="columnContainer" class="myBooksPage">
-                    <div id="leftCol" class="col reviewListLeft">
-                        <div id="sidewrapper">
+                <div id="columnContainer" class="myBooksPage" style="direction: rtl; display: flex; flex-direction: row;">
+                    <div id="leftCol" class="col reviewListLeft" style="direction: rtl;">
+                        <div id="sidewrapper" >
                             <div id="side">
                                 <div id="shelvesSection">
                                     <div class="sectionHeader">
-                                        Bookshelves
+<!--                                        Bookshelves-->
+                                        <p style="text-align: right; font-size: 20px;">
+                                            قفسه کتاب
+                                        </p>
+
                                     </div>
                                     <div id="paginatedShelfList" class="stacked">
                                         <div class="user_shelf">
-                                            <a title="All" class="actionLinkLite" href="mylibrary.php" ">All </a>
+<!--                                            <a title="All" class="actionLinkLite" href="mylibrary.php" ">All </a>-->
+                                            <a title="All" class="actionLinkLite" href="mylibrary.php">
+                                                <p style="text-align: right; margin: 0;">
+                                                    همه
+                                                </p>
+                                            </a>
                                         </div>
-                                        <div class="userShelf">
-                                            <a  title="Read" class="actionLinkLite" href="mylibrary.php?state=0"">Read</a>
-                                        </div>
-                                        <div class="userShelf">
-                                            <a  title="Currently Reading shelf" class="actionLinkLite" href="mylibrary.php?state=1" ">Currently Reading </a>
-                                        </div>
-                                        <div class="userShelf">
-                                            <a title="Want to Read shelf" class="actionLinkLite" href="mylibrary.php?state=2" >Want to Read</a>
+                                        <div class="userShelf" style="display: flex; flex-direction: column; margin: 0;">
+<!--                                            <a  title="Read" class="actionLinkLite" href="mylibrary.php?state=0"">Read</a>-->
+                                            <a  title="Read" class="actionLinkLite" href="mylibrary.php?state=0">
+                                                <p style="text-align: right; margin: 0;">
+                                                    خوانده شده
+                                                </p>
+                                            </a>
+<!--                                        </div>-->
+<!--                                        <div class="userShelf">-->
+<!--                                            <a  title="Currently Reading shelf" class="actionLinkLite" href="mylibrary.php?state=1" ">Currently Reading </a>-->
+                                            <a  title="Currently Reading shelf" class="actionLinkLite" href="mylibrary.php?state=1" >
+                                                <p style="text-align: right; margin: 0;">
+                                                    در حال خواندن
+                                                </p>
+                                            </a>
+<!--                                        </div>-->
+<!--                                        <div class="userShelf">-->
+<!--                                            <a title="Want to Read shelf" class="actionLinkLite" href="mylibrary.php?state=2" >Want to Read</a>-->
+                                            <a title="Want to Read shelf" class="actionLinkLite" href="mylibrary.php?state=2">
+                                                <p style="text-align: right; margin: 0;">
+                                                    برای خواندن
+                                                </p>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="stacked">
@@ -119,33 +148,69 @@ $newID = $new_res->fetch()['AccountSpecID'];
                                 <thead>
                                 <tr id="booksHeader" class="tableList">
                                     <th alt="cover" class="header field cover" style="">
-                                        <a>ISBN</a>
+<!--                                        <a>ISBN</a>-->
+                                        <a>
+                                            <p style="text-align: center;">
+                                                شابک
+                                            </p>
+                                        </a>
                                     </th>
                                     <th alt="title" class="header field title" style="">
-                                        <a>Title</a>
+<!--                                        <a>Title</a>-->
+                                        <p style="text-align: center;">
+                                            عنوان
+                                        </p>
+
                                     </th>
                                     <th alt="author" class="header field author" style="">
-                                        <a>Author</a>
+<!--                                        <a>Author</a>-->
+                                        <p style="text-align: center;">
+                                            نویسنده
+                                        </p>
+
                                     </th>
                                     <th alt="avg_rating" class="header field avg_rating" style="">
-                                        <a>NumberOfPages</a>
+<!--                                        <a>NumberOfPages</a>-->
+                                        <p style="text-align: center;">
+                                            تعداد صفحات
+                                        </p>
+
                                     </th>
                                     <th alt="num_ratings" class="header field avg_rating" style="">
-                                        <a>Done Pages</a>
+<!--                                        <a>Done Pages</a>-->
+                                        <p style="text-align: center;">
+                                            تعداد صفحات خوانده شده
+                                        </p>
+
                                     </th>
                                     <th alt="rating" class="header field rating" style="">
-                                        <a>avg rating</a>
+<!--                                        <a>avg rating</a>-->
+                                        <p style="text-align: center;">
+                                            میانگین امتیاز
+                                        </p>
+
                                     </th>
 
                                     <th alt="review" class="header field shelves" style="">
-                                        <a>num ratings</a>
+<!--                                        <a>num ratings</a>-->
+                                        <p style="text-align: center;">
+                                            تعداد امتیازها
+                                        </p>
+
                                     </th>
 
                                     <th alt="date_read" class="header field date_read" style="">
-                                        <a>publisher</a>
+<!--                                        <a>publisher</a>-->
+                                        <p style="text-align: center;">
+                                            ناشر
+                                        </p>
+
                                     </th>
                                     <th alt="date_added" class="header field date_added" style="">
-                                        <a>date</a>
+<!--                                        <a>date</a>-->
+                                        <p style="text-align: center;">
+                                            تاریخ ثبت
+                                        </p>
 
                                     </th>
                                 </tr>
