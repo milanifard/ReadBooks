@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./BookReads/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./BookReads/css/index.css">
 </head>
-<body class="bg-light">
+<body class="bg-light" style="direction: rtl;">
     <div class="container-fluid">
         
 
@@ -31,15 +31,18 @@
 
         <div class="row bg-dark" style="text-align: center;">
             <div class="col-4">
-                <a href="./mylibrary.php"><b style="color: white;">Profile</b></a>
+<!--                <a href="./mylibrary.php"><b style="color: white;">Profile</b></a>-->
+                <a href="./mylibrary.php"><b style="color: white;">پروفایل</b></a>
             </div>
 
             <div class="col-4">
-                <a href="./form.php"><b style="color: white;">Add Book</b></a>
+<!--                <a href="./form.php"><b style="color: white;">Add Book</b></a>-->
+                <a href="./form.php"><b style="color: white;">افزودن کتاب</b></a>
             </div>
 
             <div class="col-4">
-                <a href="./searchBook.php"><b style="color: white;"> Search</b></a>
+<!--                <a href="./searchBook.php"><b style="color: white;"> Search</b></a>-->
+                <a href="./searchBook.php"><b style="color: white;">جستجو</b></a>
             </div>
         </div>
 
@@ -50,7 +53,8 @@
 
 
         <div class="row" style="margin-top: 8vw;">
-            <h2 class="h2" style="margin-left: 2vw;">Recommended books</h2>
+<!--            <h2 class="h2" style="margin-left: 2vw;">Recommended books</h2>-->
+            <h2 class="h2" style="margin-left: 2vw;">کتاب های پیشنهادی</h2>
             <hr style="width: 90%; display: block;  margin-bottom: 4vw; margin-left: auto; margin-right: auto;">
         </div>
         
