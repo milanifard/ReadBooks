@@ -209,12 +209,14 @@ if (isset($_POST['rate']))
                             <ul role="menu" class="siteHeader__menuList">
                                 <li class="siteHeader__topLevelItem siteHeader__topLevelItem--home">
                                     <a href="../sadaf/firstpage.php" class="siteHeader__topLevelLink" >
-                                        Home
+<!--                                        Home-->
+                                        صفحه اصلی
                                     </a>
                                 </li>
                                 <li class="siteHeader__topLevelItem">
                                     <a href="mylibrary.php" class="siteHeader__topLevelLink">
-                                        My Library
+<!--                                        My Library-->
+                                        کتابخانه من
                                     </a>
                                 </li>
                             </ul>
@@ -262,13 +264,16 @@ if (isset($_POST['rate']))
                                 <div class='wtrUp wtrLeft' >
                                     <form action=<?php echo "bookProfile.php?ISBN=$ISBN";?> method="post">
                                         <button class='wtrToRead'  type='submit' name="book_read" ">
-                                        <span class='progressTrigger'>Read</span>
+<!--                                        <span class='progressTrigger'>Read</span>-->
+                                        <span class='progressTrigger'>خوانده شده</span>
                                         </button>
                                         <button class='wtrToRead'  type='submit' name="cur_read">
-                                            <span class='progressTrigger'>Currently Reading</span>
+<!--                                            <span class='progressTrigger'>Currently Reading</span>-->
+                                            <span class='progressTrigger'>در حال خواندن</span>
                                         </button>
                                         <button class='wtrToRead' type='submit' name="want_read">
-                                            <span class='progressTrigger'>Want to Read</span>
+<!--                                            <span class='progressTrigger'>Want to Read</span>-->
+                                            <span class='progressTrigger'>برای خواندن</span>
                                         </button>
                                     </form>
                                 </div>
@@ -326,7 +331,8 @@ if (isset($_POST['rate']))
 
                                 <div class='ratingStars wtrRating' style="margin-left: -40px">
                                     <div class='starsErrorTooltip hidden'>
-                                        Error rating book. Refresh and try again.
+<!--                                        Error rating book. Refresh and try again.-->
+                                        خطا در امتیازدهی به کتاب. دوباره امتحان کنید
                                     </div>
                                     <div class='myRating uitext greyText'>Rate this book</div>
                                     <div class='clearRating uitext'>Clear rating</div>
@@ -382,7 +388,8 @@ if (isset($_POST['rate']))
 
                             <div id="bookAuthors" class="">
                                 <span class='by'>
-                                    by
+<!--                                    by-->
+                                    از
                                 </span>
                                 <span itemprop='author' itemscope='' >
                                     <div class='authorName__container'>
@@ -409,7 +416,8 @@ if (isset($_POST['rate']))
                                  itemtype="https://schema.org/AggregateRating">
 
 
-                                Rating:
+<!--                                Rating:-->
+                                امتیاز:
                                 <span itemprop="ratingValue"><?php
                                     $avg_rating = "SELECT avg(Rating.rating) as avg FROM Books,Rating where Books.ISBN=Rating.ISBN and Rating.ISBN = ".$_REQUEST['ISBN'];
                                     $avg_res = $mysql->Execute($avg_rating);
@@ -418,7 +426,8 @@ if (isset($_POST['rate']))
                                     ?>
                                 </span>
                                 <br>
-                                Number of reviews:
+<!--                                Number of reviews:-->
+                                تعداد مرورها:
                                 <span itemprop="ratingValue"><?php
                                     $cnt_rating = "SELECT count(Rating.rating) as cnt FROM Books,Rating where Books.ISBN=Rating.ISBN and Rating.ISBN = ".$_REQUEST['ISBN'];
                                     $cnt_res = $mysql->Execute($cnt_rating);
@@ -460,13 +469,16 @@ if (isset($_POST['rate']))
                                         $mysql = pdodb::getInstance();
                                         $res = $mysql-> Execute($query);
                                         echo $res->fetch()['numberofPage'];
-                                        ?> pages
+                                        ?>
+<!--                                        pages-->
+                                        صفحه
                                     </span>
                                 </div>
 
                                 <div class="row">
-                                    Published
-                                    by
+<!--                                    Published-->
+<!--                                    by-->
+                                    منتشر شده توسط
                                     <?php
                                     $query = "select * from Comments ,Books where Comments.ISBN=Books.ISBN and Books.ISBN=".$_REQUEST['ISBN'];
                                     $mysql = pdodb::getInstance();
@@ -482,7 +494,10 @@ if (isset($_POST['rate']))
                                     <div id="bookDataBox" class="uitext" style=" margin: 10px 0">
 
                                         <div class="clearFloats">
-                                            <div class="infoBoxRowTitle">ISBN</div>
+                                            <div class="infoBoxRowTitle">
+<!--                                                ISBN-->
+                                                شابک
+                                            </div>
                                             <div class="infoBoxRowItem">
                                                 <?php
                                                 $query = "select * from Books where Books.ISBN=".$_REQUEST['ISBN'];
@@ -498,7 +513,8 @@ if (isset($_POST['rate']))
 
                             <div>
                                 <div>
-                                    Comments:
+<!--                                    Comments:-->
+                                    نظرات:
                                     <div class='horizontalGreyDivider' style='border-bottom:1px solid #D8D8D8;margin:0.5em 0'></div>
                                 </div>
 
@@ -520,14 +536,16 @@ if (isset($_POST['rate']))
                                     $new_res = $mysql->Execute($query);
                                     $newID = $new_res->fetch()['UserID'];
 
-                                    echo "Commented by: ".$newID;
+//                                    echo "Commented by: ".$newID;
+                                    echo "<p>نظر ثبت شده توسط:</p>".$newID;
 
                                     echo "</td>";
                                     echo "</tr>";
 
                                     echo"<tr>";
                                     echo "<td>";
-                                    echo "Comment: ".$rec['content'];
+//                                    echo "Comment: ".$rec['content'];
+                                    echo "<p>نظر:</p>".$rec['content'];
                                     echo "</td>";
 
                                     if($newID== $_SESSION["UserID"]){
@@ -544,7 +562,9 @@ if (isset($_POST['rate']))
                                 }
                                 ?>
                                 <div>
-                                    Add comments:<br>
+<!--                                    Add comments:-->
+                                    افزودن نظرات:
+                                    <br>
                                     <?php
                                     $userid = $_SESSION['UserID'];
                                     $query = "select * from AccountSpecs,Comments where AccountSpecs.AccountSpecID=Comments.ID  
@@ -557,7 +577,7 @@ if (isset($_POST['rate']))
                                     else{
                                         echo "<form action='BookProfile.php?ISBN=$ISBN' method='post'>
                                         <input type='text' id='comment' name='comment' style='width: 300px; height: 100px'>
-                                        <input type='submit' value='Send' name='write_comment'>
+                                        <input type='submit' value='ارسال' name='write_comment'>
                                         </form>";
                                     }
 
