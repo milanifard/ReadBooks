@@ -82,80 +82,101 @@ function test_input($data) {
 
 <html>
   <head>
-    <title>New Book Form </title>
+    <title>فرم کتاب جدید</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/form.css">
   </head>
-  <body>   
+  <body style="direction: rtl;">
     <div class="testbox">
         <form method="post" enctype = "multipart/form-data">
         <div class="banner">
-          <h1>New Book Form</h1>
+<!--          <h1>New Book Form</h1>-->
+            <h1>فرم کتاب جدید</h1>
           <img src="./images/bg_img2.jpg" width="1600" height="320">
         </div>
           
         <div class="item">
-            <div class="name-item">
+            <div class="name-item" >
                 <div>
-                    <label for="isbn">ISBN<span>*</span></label>
-                    <input id="isbn" type="text" name="isbn"  placeholder="Example : 9780393958041" required >
+<!--                    <label for="isbn">ISBN<span>*</span></label>-->
+                    <label for="isbn">شابک<span>*</span></label>
+<!--                    <input id="isbn" type="text" name="isbn"  placeholder="Example : 9780393958041" required >-->
+                    <input id="isbn" type="text" name="isbn"  placeholder="مثال: 9780393958041" required >
                 </div>
             </div>
         </div>
         <div class="item">
-            <label for="title">Title<span>*</span></label>
-            <div class="name-item">
-                <input id="title" type="text" name="title" placeholder="Example : Alice in wonderland" required>
+<!--            <label for="title">Title<span>*</span></label>-->
+            <label for="title">عنوان<span>*</span></label>
+            <div class="name-item" style="width: 100%;">
+<!--                <input id="title" type="text" name="title" placeholder="Example : Alice in wonderland" required>-->
+                <input id="title" type="text" name="title" maxlength="1000" placeholder="مثال: آلیس در سرزمین عجایب" required>
             </div>
-            <label for="publisher">Publisher<span>*</span></label>
-            <div class="name-item">
-                <input id="publisher" type="text" name="publisher" placeholder="Example : Norton Critical " required >
+        </div>
+
+        <div class="item">
+<!--            <label for="publisher">Publisher<span>*</span></label>-->
+            <label for="publisher">ناشر<span>*</span></label>
+            <div class="name-item" style="width: 100%;">
+<!--                <input id="publisher" type="text" name="publisher" placeholder="Example : Norton Critical " required >-->
+                <input id="publisher" type="text" name="publisher" placeholder="مثال: Macmillan" required >
             </div>
         </div>
         <div class="item">
-            <label for="date">Date<span>*</span></label>
+<!--            <label for="date">Date<span>*</span></label>-->
+            <label for="date"> تاریخ ثبت<span>*</span></label>
             <input id="date" type="date" name="date" required/>
             <i class="fas fa-calendar-alt"></i>
         </div>
         <div class="item">
             <div class="name-item">
                 <div>
-                    <label for="author"> Author <span>*</span> </label>
-                    <input id="author" type="text" name="author" placeholder="Example : Lewis Carroll" required>
+<!--                    <label for="author"> Author <span>*</span> </label>-->
+                    <label for="author"> نویسنده <span>*</span> </label>
+<!--                    <input id="author" type="text" name="author" placeholder="Example : Lewis Carroll" required>-->
+                    <input id="author" type="text" name="author" placeholder="مثال: لوئیس کارول" required>
                 </div>
             </div>
         </div>
         <div class="item">
             <div class="name-item">
                 <div>
-                    <label for="User-ID"> User-ID <span>*</span> </label>
-                    <input id="user" type="number" name="user" placeholder="User-ID : 1" required>
+<!--                    <label for="User-ID"> User-ID <span>*</span> </label>-->
+                    <label for="User-ID"> شناسه کاربر <span>*</span> </label>
+<!--                    <input id="user" type="number" name="user" placeholder="User-ID : 1" required>-->
+                    <input id="user" type="number" name="user" placeholder="مثال: 1" required>
                 </div>
             </div>
         </div>
         <div class="item">
             <div class="name-item">
                 <div>
-                    <label for="Number of Pages"> Number of Pages <span>*</span> </label>
-                    <input id="pages" type="number" name="pages" placeholder="Example : 1111" required>
+<!--                    <label for="Number of Pages"> Number of Pages <span>*</span> </label>-->
+                    <label for="Number of Pages"> تعداد صفحات <span>*</span> </label>
+<!--                    <input id="pages" type="number" name="pages" placeholder="Example : 1111" required>-->
+                    <input id="pages" type="number" name="pages" placeholder="مثال: 1111" required>
                 </div>
             </div>
         </div>
         <div class="item">
-          <label for="apply">Description</label>
+<!--          <label for="apply">Description</label>-->
+            <label for="apply">توضیحات</label>
         <textarea id="desc" rows="3"></textarea>
         </div>
         <div class="item">
-          <label for="cv">Upload PDF File<span>*</span></label>
+<!--          <label for="cv">Upload PDF File<span>*</span></label>-->
+            <label for="cv">آپلود فایل PDF<span>*</span></label>
           <input  id="pdf" name = "pdf" type="file" required>
         </div>
         <div class="item">
-          <label for="cover">Upload Cover Image<span>*</span></label>
+<!--          <label for="cover">Upload Cover Image<span>*</span></label>-->
+            <label for="cover">آپلود تصویر جلد کتاب<span>*</span></label>
           <input  id="img" name = "img" type="file" required>
         </div>
         <div class="btn-block">
-          <button type="submit" >Submit</button>
+<!--          <button type="submit" >Submit</button>-->
+            <button type="submit" >ارسال</button>
         </div>
       </form>
     </div>
