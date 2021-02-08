@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./BookReads/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./BookReads/css/index.css"
 </head>
-<body class="bg-light">
+<body class="bg-light" style="direction: rtl;">
     <div class="container-fluid">
         
 
@@ -23,9 +23,9 @@
             </div>
 
 
-            <div class="col-2" style="margin-top: auto; margin-bottom: auto;">
-                <a class="profile-link">Profile</a>
-            </div>
+<!--            <div class="col-2" style="margin-top: auto; margin-bottom: auto;">-->
+<!--                <a class="profile-link">Profile</a>-->
+<!--            </div>-->
 
             <div class="col-1"></div>
         </div>
@@ -33,15 +33,18 @@
 
         <div class="row bg-dark" style="text-align: center;">
             <div class="col-4">
-                <a href="./mylibrary.php"><b style="color: white;">Profile</b></a>
+<!--                <a href="./mylibrary.php"><b style="color: white;">Profile</b></a>-->
+                <a href="./mylibrary.php"><b style="color: white;">پروفایل</b></a>
             </div>
 
             <div class="col-4">
-                <a href="./form.php"><b style="color: white;">Add Book</b></a>
+<!--                <a href="./form.php"><b style="color: white;">Add Book</b></a>-->
+                <a href="./form.php"><b style="color: white;">افزودن کتاب</b></a>
             </div>
 
             <div class="col-4">
-                <a href="./searchBook.php"><b style="color: white;"> Search</b></a>
+<!--                <a href="./searchBook.php"><b style="color: white;"> Search</b></a>-->
+                <a href="./searchBook.php"><b style="color: white;">جستجو</b></a>
             </div>
         </div>
 
@@ -53,7 +56,8 @@
 
 
         <div class="row" style="margin-top: 8vw;">
-            <h2 class="h2" style="margin-left: 2vw;">Find book</h2>
+<!--            <h2 class="h2" style="margin-left: 2vw;">Find book</h2>-->
+            <h2 class="h2" style="margin-left: 2vw;">جستجوی کتاب</h2>
             <hr style="width: 90%; display: block;  margin-bottom: 4vw; margin-left: auto; margin-right: auto;">
         </div>
 
@@ -107,14 +111,17 @@
         <div class="row">
             <form class="form-inline" style="text-align: center;">
                 <div class="form-group mb-2">
-                    <p>Search based on name of the authour
+<!--                    <p>Search based on name of the authour-->
+                    <p>جستجو بر اساس نام نویسنده
                     <label for="staticEmail2" class="sr-only">Find by author's name:</label>
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
                     <label for="inputPassword2" class="sr-only">Find by book</label>
-                    <input type="text" class="form-control" id="author"  name="author" placeholder="author">
+<!--                    <input type="text" class="form-control" id="author"  name="author" placeholder="author">-->
+                    <input type="text" class="form-control" id="author"  name="author" placeholder="نویسنده">
                 </div>
-                <button type="submit" class="btn btn-success mb-2" name="findByAuthor" id="findByAuthor">Search</button>
+<!--                <button type="submit" class="btn btn-success mb-2" name="findByAuthor" id="findByAuthor">Search</button>-->
+                <button type="submit" class="btn btn-success mb-2" name="findByAuthor" id="findByAuthor">جستجو</button>
             </form>
         </div>
 
@@ -122,14 +129,17 @@
         <div class="row" >
             <form class="form-inline" style="text-align: center;">
                 <div class="form-group mb-2">
-                    <p>Search based on title
+<!--                    <p>Search based on title-->
+                    <p>جستجو بر اساس عنوان
                     <label for="staticEmail2" class="sr-only">Find by author's name:</label>
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
                     <label for="inputPassword2" class="sr-only">Find by title</label>
-                    <input type="text" class="form-control" id="title" name="title" placeholder="title">
+<!--                    <input type="text" class="form-control" id="title" name="title" placeholder="title">-->
+                    <input type="text" class="form-control" id="title" name="title" placeholder="عنوان">
                 </div>
-                <button type="submit" class="btn btn-success mb-2" name="findByTitle" id="findByTitle">Search</button>
+<!--                <button type="submit" class="btn btn-success mb-2" name="findByTitle" id="findByTitle">Search</button>-->
+                <button type="submit" class="btn btn-success mb-2" name="findByTitle" id="findByTitle">جستجو</button>
             </form>
         </div>
 
