@@ -1,0 +1,74 @@
+/* body{
+    background-image: url("../asset/images/bg_img2.jpg");
+    background-repeat: no-repeat;
+}
+ */
+
+.book{
+    width: 12vw;
+}
+
+.book-text{
+    /* font-size: 1.5vw; */
+    text-decoration: none;
+    /* width: 50%; */
+}
+
+.book-container{
+    text-align: center;
+}
+
+.book-row{
+    margin-top: 3vw;
+}
+
+
+.profile-link{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.7vw 0.7vw 0.7vw 0.7vw;
+}
+
+.profile-link:hover{
+    color: white;
+
+    text-decoration: none;
+
+    border: 0.1vw solid white;
+    border-radius: 0.5vw;
+}
+
+.logo{
+    text-align: center;
+    font-size: 4.5vw;
+    max-block-size: 5vh;
+    color: white;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+#logo-bold{
+    color: brown;
+}
+
+.header{
+    height: 6vw;
+    min-height: 5vh;
+    max-height: 6vw;
+}
+
+.search-bar{
+    width: 2vw;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.search-button{
+    height: 4.3vh;
+    margin-top: auto;
+    margin-bottom: auto;
+}

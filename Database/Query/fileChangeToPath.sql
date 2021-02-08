@@ -1,0 +1,4 @@
+ALTER TABLE Books
+MODIFY COLUMN files varchar(255);
+ALTER TABLE Books
+MODIFY COLUMN image varchar(255);

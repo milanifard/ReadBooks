@@ -1,0 +1,3 @@
+SELECT AVG(rating)
+FROM Rating
+WHERE ISBN = "123Y";
