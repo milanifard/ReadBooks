@@ -557,7 +557,7 @@ if (isset($_POST['rate']))
                                     if($newID== $_SESSION["UserID"]){
                                         echo "<td style='padding-left: 100px'>";
                                         echo "<form action='BookProfile.php?ISBN=$ISBN' method='post'>
-                                        <input type='submit' value='Delete Comment' name='delete_comment'>
+                                        <input type='submit' value='حذف نظر' name='delete_comment'>
                                         </form>";
                                         echo "</td>";
                                     }
