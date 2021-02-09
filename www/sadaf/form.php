@@ -3,6 +3,12 @@
 <?php
 include "header.inc.php";
 //HTMLBegin();
+
+$userid = $_SESSION["UserID"];
+$query = "select * from AccountSpecs where UserID='$userid'";
+$mysql = pdodb::getInstance();
+$res = $mysql->Execute($query);
+$accountSpecID = $res->fetch()['AccountSpecID'];
 ?>
 
 
@@ -22,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $author = test_input($_REQUEST["author"]);
         $date = test_input($_REQUEST["date"]);
         $desc = test_input($_REQUEST["desc"]);
-        $user = test_input($_REQUEST["user"]);
+        $user = $accountSpecID;
 
     if(isset($_FILES['pdf']) && $_FILES['pdf']['name'] != ""){
         $pdf_content = file_get_contents($_FILES["pdf"]["tmp_name"]);
@@ -49,26 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $res = $mysql->Execute($query);
     }
 }
-
-//check for duplicate
-
-
-//if (!mysql_num_rows($res)){
-//echo "not repeat";
-// INSERT QUERY
-//INSERT INTO Books (title , ISBN , publisher , numberofPage  ,  Author , dates  ,  descriptions , image , files , AccountSpecID)
-// VALUES ( $title  , $isbn , $publisher , $page , $author , $date , $desc , $img_path , $file_path , $user);"
-//}
-//else{
-  //  echo "repeated";
-//}
-
-
-
-
-// $mysql = pdodb::get->Instance()
-// $query = 
-// $res = $mysql->Execute($query)
 
 
 function test_input($data) {
@@ -139,16 +125,7 @@ function test_input($data) {
                 </div>
             </div>
         </div>
-        <div class="item">
-            <div class="name-item">
-                <div>
-<!--                    <label for="User-ID"> User-ID <span>*</span> </label>-->
-                    <label for="User-ID"> شناسه کاربر <span>*</span> </label>
-<!--                    <input id="user" type="number" name="user" placeholder="User-ID : 1" required>-->
-                    <input id="user" type="number" name="user" placeholder="مثال: 1" required>
-                </div>
-            </div>
-        </div>
+        
         <div class="item">
             <div class="name-item">
                 <div>

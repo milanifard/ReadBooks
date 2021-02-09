@@ -144,10 +144,10 @@ $newID = $new_res->fetch()['AccountSpecID'];
                     </div>
                     <div id="rightCol" class="last col">
                         <div class="js-dataTooltip" data-use-wtr-tooltip="true">
-                            <table id="books" class="table stacked"  border="1px">
+                            <table id="books" class="styled-table "  border="1px">
                                 <thead>
-                                <tr id="booksHeader" class="tableList">
-                                    <th alt="cover" class="header field cover" style="">
+                                <tr id="booksHeader" >
+                                    <th alt="cover" >
 <!--                                        <a>ISBN</a>-->
                                         <a>
                                             <p style="text-align: center;">
@@ -155,35 +155,35 @@ $newID = $new_res->fetch()['AccountSpecID'];
                                             </p>
                                         </a>
                                     </th>
-                                    <th alt="title" class="header field title" style="">
+                                    <th alt="title" >
 <!--                                        <a>Title</a>-->
                                         <p style="text-align: center;">
                                             عنوان
                                         </p>
 
                                     </th>
-                                    <th alt="author" class="header field author" style="">
+                                    <th alt="author">
 <!--                                        <a>Author</a>-->
                                         <p style="text-align: center;">
                                             نویسنده
                                         </p>
 
                                     </th>
-                                    <th alt="avg_rating" class="header field avg_rating" style="">
+                                    <th alt="avg_rating">
 <!--                                        <a>NumberOfPages</a>-->
                                         <p style="text-align: center;">
                                             تعداد صفحات
                                         </p>
 
                                     </th>
-                                    <th alt="num_ratings" class="header field avg_rating" style="">
+                                    <th alt="num_ratings">
 <!--                                        <a>Done Pages</a>-->
                                         <p style="text-align: center;">
                                             تعداد صفحات خوانده شده
                                         </p>
 
                                     </th>
-                                    <th alt="rating" class="header field rating" style="">
+                                    <th alt="rating">
 <!--                                        <a>avg rating</a>-->
                                         <p style="text-align: center;">
                                             میانگین امتیاز
@@ -191,7 +191,7 @@ $newID = $new_res->fetch()['AccountSpecID'];
 
                                     </th>
 
-                                    <th alt="review" class="header field shelves" style="">
+                                    <th alt="review" >
 <!--                                        <a>num ratings</a>-->
                                         <p style="text-align: center;">
                                             تعداد امتیازها
@@ -199,14 +199,14 @@ $newID = $new_res->fetch()['AccountSpecID'];
 
                                     </th>
 
-                                    <th alt="date_read" class="header field date_read" style="">
+                                    <th alt="date_read" >
 <!--                                        <a>publisher</a>-->
                                         <p style="text-align: center;">
                                             ناشر
                                         </p>
 
                                     </th>
-                                    <th alt="date_added" class="header field date_added" style="">
+                                    <th alt="date_added" >
 <!--                                        <a>date</a>-->
                                         <p style="text-align: center;">
                                             تاریخ ثبت
