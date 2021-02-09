@@ -59,11 +59,18 @@ if (isset($_POST['delete_comment']))
 ?>
 
 <?php
+
 $userid = $_SESSION['UserID'];
 $query = "select * from AccountSpecs where UserID='$userid'";
 $mysql = pdodb::getInstance();
 $res = $mysql->Execute($query);
 $id = $res->fetch()['AccountSpecID'];
+
+$query = "Select * From sadaf.Books where ISBN=$ISBN";
+$mysql = pdodb::getInstance();
+$res = $mysql->Execute($query);
+$num_pages = $res->fetch()['numberofPage'];
+
 
 $query = "Select * From sadaf.Connects where ISBN=$ISBN and AccountSpecID=$id";
 $mysql = pdodb::getInstance();
@@ -74,7 +81,7 @@ if ($rec){
     {
 
         $query = "UPDATE sadaf.Connects
-        SET state = 0
+        SET state = 0,donePages = $num_pages
         where ISBN=$ISBN and AccountSpecID=$id";
         $res = $mysql->Execute($query);
 
@@ -90,7 +97,7 @@ if ($rec){
     if (isset($_POST['want_read']))
     {
         $query = "UPDATE sadaf.Connects
-        SET state = 2
+        SET state = 2,donePages=0
         where ISBN=$ISBN and AccountSpecID=$id";
         $res = $mysql->Execute($query);
 
@@ -178,7 +185,6 @@ if (isset($_POST['rate']))
     </style>
 
     <link rel="stylesheet" media="all" href="./css/goodreads_all.css" />
-
 
 
     <link rel="stylesheet" media="screen" href="./css/goodreads_screen.css" />
